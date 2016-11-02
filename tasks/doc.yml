@@ -1,0 +1,13 @@
+---
+
+- name: Install sphinx-doc package
+  apt: pkg=sphinx-doc state=latest
+
+- name: Install sphinx-common package
+  apt: pkg=sphinx-common state=latest
+
+- name: build documentation
+  command: sphinx-build -c {{ sphinx_doc_source_path }} {{ sphinx_doc_source_path }} {{ sphinx_doc_target_path }}
+  when: (sphinx_doc_source_path is defined and sphinx_doc_source_path != false) and (sphinx_doc_target_path is defined and sphinx_doc_target_path != false)
+
+
