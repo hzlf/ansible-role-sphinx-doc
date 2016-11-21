@@ -3,7 +3,7 @@ galaxy_info:
   author: Jonas Ohrstrom
   description: Minimalistic role to generate sphinx doc
   license: MIT
-  min_ansible_version: 1.6
+  min_ansible_version: 2.0
   platforms:
   - name: Debian
     versions:
